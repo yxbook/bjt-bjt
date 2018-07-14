@@ -1,0 +1,131 @@
+j4sc:
+  sms:
+    account-sid: 1f9ff2fe2e0d4bc08fe89a0e43144d91
+    auth-token: cb57d0358cfa415396fec3acdc055097
+logging:
+  level:
+    org.springframework.cloud.sleuth: DEBUG
+spring:
+  zipkin:
+    base-url: http://${ZIPKIN_HOST:172.18.147.199}:9411/
+    sender:
+      type: web
+    service:
+      name: bjt-system
+  sleuth:
+    sampler:
+     probability: 0.1
+  application:
+    name: bjt-system-server
+  rabbitmq:
+      host: ${RABBIT_HOST:172.18.147.199}
+      port: 5672
+      username: bjrabbit
+      password: bangjia2018
+  #开启消息追踪
+  cloud:
+    bus:
+      enabled: false
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://(host=${MYSQL_HOST:rm-wz92bf75fzu7z658q.mysql.rds.aliyuncs.com},port=${MYSQL_PORT:3306},serverTimezone=UTC,useSSL=true,useUnicode=true,characterEncoding=utf-8,autoReconnect=true)/j4sc
+      username: bjtroot
+      password: Bangjia2018
+      # 配置初始化大小、最小、最大
+      maxActive: 20
+      initialSize: 1
+      minIdle: 1
+      # 配置监控统计拦截的filters
+      filters: stat
+      # 配置获取连接等待超时的时间
+      maxWait: 60000
+      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      timeBetweenEvictionRunsMillis: 60000
+      # 配置一个连接在池中最小生存的时间，单位是毫秒
+      minEvictableIdleTimeMillis: 300000
+      # 校验语句
+      validationQuery: SELECT 1
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20
+  ##### redis 支持RedisTemplate #####
+  redis:
+    database: 1
+    host: ${REDIS_HOST:172.18.147.199}
+    port: ${REDIS_PORT:6379}
+    password: mWAeTehZJrn4lLbsDRU1CQ==
+    jedis:
+      pool:
+         max-active: 60
+server:
+  port: 1003
+eureka:
+  instance:
+    statusPageUrlPath: /actuator/info
+    healthCheckUrlPath: /actuator/health
+    # docker 部署开启
+    prefer-ip-address: true
+    ipAddress: ${INSTANCE_HOST:172.18.147.199}
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_HOST:172.18.147.199}:${EUREKA_PORT:8761}/eureka/
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+        encoder: feign.jackson.JacksonEncoder
+        decoder: feign.jackson.JacksonDecoder
+  hystrix:
+    enabled: true
+#mybatis
+mybatis-plus:
+ # mapper-locations: classpath:/com/j4cs/upms/*/mapper/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  #typeAliasesPackage: com.j4sc.upms.dao.entity
+  #typeEnumsPackage: com.j4sc.upms.dao.entity.enums
+  global-config:
+    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+    id-type: 2
+    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+    field-strategy: 2
+    #驼峰下划线转换
+    db-column-underline: true
+    #刷新mapper 调试神器
+    refresh-mapper: true
+    #数据库大写下划线转换
+    #capital-mode: true
+    #序列接口实现类配置,不在推荐使用此方式进行配置,请使用自定义bean注入
+    key-generator: com.baomidou.mybatisplus.incrementer.H2KeyGenerator
+    #逻辑删除配置（下面3个配置）
+    logic-delete-value: -1
+    logic-not-delete-value: 1
+    #自定义sql注入器,不在推荐使用此方式进行配置,请使用自定义bean注入
+    sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+    #自定义填充策略接口实现,不在推荐使用此方式进行配置,请使用自定义bean注入
+    #meta-object-handler: com.baomidou.springboot.MyMetaObjectHandler
+    #自定义SQL注入器
+    #sql-injector: com.baomidou.springboot.xxx
+    # SQL 解析缓存，开启后多租户 @SqlParser 注解生效
+    sql-parser-cache: true
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    #配置JdbcTypeForNull, oracle数据库必须配置
+    jdbc-type-for-null: 'null'
+##### redis 支持RedisUtil#####
+master:
+  redis:
+    ip: ${REDIS_HOST:172.18.147.199}
+    port: ${REDIS_PORT:6379}
+    password: mWAeTehZJrn4lLbsDRU1CQ==
+    max_active: 500
+    max_idle: 5
+    max_wait: 10000
+    timeout: 10000
+j4sc.auth.token-header: "j4sc-token"

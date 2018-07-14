@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.j4sc.bjt.park.dao.mapper.BjtParkCompanyClockMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.j4sc.bjt.park.dao.entity.BjtParkCompanyClock">
+        <id column="clock_id" property="clockId" />
+        <result column="user_id" property="userId" />
+        <result column="in_time" property="inTime" />
+        <result column="in_type" property="inType" />
+        <result column="in_address" property="inAddress" />
+        <result column="in_longitude" property="inLongitude" />
+        <result column="in_latitude" property="inLatitude" />
+        <result column="out_time" property="outTime" />
+        <result column="out_type" property="outType" />
+        <result column="out_address" property="outAddress" />
+        <result column="out_longitude" property="outLongitude" />
+        <result column="out_latitude" property="outLatitude" />
+        <result column="user_realname" property="userRealname" />
+        <result column="remark" property="remark" />
+        <result column="in_way" property="inWay" />
+        <result column="out_way" property="outWay" />
+        <result column="ctime" property="ctime" />
+        <result column="late_remark" property="lateRemark" />
+        <result column="leave_remark" property="leaveRemark" />
+    </resultMap>
+
+</mapper>

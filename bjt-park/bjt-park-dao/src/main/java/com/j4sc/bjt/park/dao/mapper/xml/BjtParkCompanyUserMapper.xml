@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.j4sc.bjt.park.dao.mapper.BjtParkCompanyUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.j4sc.bjt.park.dao.entity.BjtParkCompanyUser">
+        <id column="company_user_id" property="companyUserId" />
+        <result column="company_id" property="companyId" />
+        <result column="user_id" property="userId" />
+        <result column="type" property="type" />
+        <result column="company_name" property="companyName" />
+        <result column="job" property="job" />
+        <result column="realname" property="realname" />
+        <result column="phone" property="phone" />
+        <result column="id_number" property="idNumber" />
+        <result column="department" property="department" />
+        <result column="sex" property="sex" />
+    </resultMap>
+
+</mapper>

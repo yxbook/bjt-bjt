@@ -1,0 +1,14 @@
+package ${package_name}.rest.api;
+
+import com.j4sc.common.base.BaseService;
+import ${package_name}.dao.entity.${model};
+
+/**
+* @Description: ${model} Service接口
+* @Author: LongRou
+* @CreateDate: ${ctime}.
+* @Version: 1.0
+**/
+public interface ${model}Service extends BaseService<${model}> {
+
+}

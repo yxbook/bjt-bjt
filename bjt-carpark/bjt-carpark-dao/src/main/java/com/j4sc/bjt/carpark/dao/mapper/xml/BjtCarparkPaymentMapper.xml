@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.j4sc.bjt.carpark.dao.mapper.BjtCarparkPaymentMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.j4sc.bjt.carpark.dao.entity.BjtCarparkPayment">
+        <id column="payment_id" property="paymentId" />
+        <result column="car_id" property="carId" />
+        <result column="plate_number" property="plateNumber" />
+        <result column="fee" property="fee" />
+        <result column="number" property="number" />
+        <result column="begin_time" property="beginTime" />
+        <result column="end_time" property="endTime" />
+        <result column="total_fee" property="totalFee" />
+        <result column="pay_way" property="payWay" />
+        <result column="remark" property="remark" />
+        <result column="ctime" property="ctime" />
+        <result column="status" property="status" />
+        <result column="space_id" property="spaceId" />
+        <result column="space_name" property="spaceName" />
+        <result column="user_id" property="userId" />
+        <result column="username" property="username" />
+        <result column="realname" property="realname" />
+        <result column="cut_off_time" property="cutOffTime" />
+        <result column="type" property="type" />
+        <result column="resource" property="resource" />
+    </resultMap>
+
+</mapper>

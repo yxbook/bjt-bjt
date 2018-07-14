@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.j4sc.bjt.park.dao.mapper.BjtParkCompanyClockRuleMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.j4sc.bjt.park.dao.entity.BjtParkCompanyClockRule">
+        <id column="rule_id" property="ruleId" />
+        <result column="in_time" property="inTime" />
+        <result column="out_time" property="outTime" />
+        <result column="work_day" property="workDay" />
+        <result column="company_id" property="companyId" />
+        <result column="remark" property="remark" />
+        <result column="longitude" property="longitude" />
+        <result column="latitude" property="latitude" />
+        <result column="address" property="address" />
+        <result column="ctime" property="ctime" />
+        <result column="wifi_name" property="wifiName" />
+    </resultMap>
+
+</mapper>

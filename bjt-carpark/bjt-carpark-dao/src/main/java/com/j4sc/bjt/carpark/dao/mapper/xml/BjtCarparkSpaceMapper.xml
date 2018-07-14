@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.j4sc.bjt.carpark.dao.mapper.BjtCarparkSpaceMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.j4sc.bjt.carpark.dao.entity.BjtCarparkSpace">
+        <id column="space_id" property="spaceId" />
+        <result column="name" property="name" />
+        <result column="address" property="address" />
+        <result column="longitude" property="longitude" />
+        <result column="latitude" property="latitude" />
+        <result column="number" property="number" />
+        <result column="open" property="open" />
+        <result column="month_fee" property="monthFee" />
+        <result column="year_fee" property="yearFee" />
+        <result column="hour_fee" property="hourFee" />
+        <result column="ctime" property="ctime" />
+        <result column="temporary_number" property="temporaryNumber" />
+        <result column="fixed_number" property="fixedNumber" />
+        <result column="temporary" property="temporary" />
+        <result column="fixed" property="fixed" />
+        <result column="contact" property="contact" />
+        <result column="contact_way" property="contactWay" />
+        <result column="park_id" property="parkId" />
+    </resultMap>
+
+</mapper>

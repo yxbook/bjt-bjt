@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.j4sc</groupId>
+    <artifactId>bjt-park</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <modules>
+        <module>bjt-park-common</module>
+        <module>bjt-park-dao</module>
+        <module>bjt-park-rest</module>
+        <module>bjt-park-server</module>
+    </modules>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>9</maven.compiler.source>
+        <maven.compiler.target>9</maven.compiler.target>
+        <maven.compiler.compilerVersion>9</maven.compiler.compilerVersion>
+    </properties>
+    <distributionManagement>
+        <repository>
+            <id>j4sc-repo</id>
+            <name>Nexus Release Repository</name>
+            <url>http://localServer:9999/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>j4sc-repo</id>
+            <name>Nexus Release Repository</name>
+            <url>http://localServer:9999/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+</project>

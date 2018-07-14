@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.j4sc.bjt.user.dao.mapper.BjtUserBillMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.j4sc.bjt.user.dao.entity.BjtUserBill">
+        <id column="bill_id" property="billId" />
+        <result column="user_id" property="userId" />
+        <result column="money" property="money" />
+        <result column="status" property="status" />
+        <result column="type" property="type" />
+        <result column="pay_way" property="payWay" />
+        <result column="cut_off_time" property="cutOffTime" />
+        <result column="pay_time" property="payTime" />
+        <result column="remark" property="remark" />
+        <result column="ctime" property="ctime" />
+        <result column="username" property="username" />
+        <result column="company_name" property="companyName" />
+        <result column="company_id" property="companyId" />
+        <result column="house_number" property="houseNumber" />
+        <result column="build_id" property="buildId" />
+        <result column="agreement_id" property="agreementId" />
+    </resultMap>
+
+</mapper>

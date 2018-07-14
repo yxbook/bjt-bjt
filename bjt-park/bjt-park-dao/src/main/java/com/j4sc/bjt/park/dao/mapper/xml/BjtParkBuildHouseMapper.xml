@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.j4sc.bjt.park.dao.mapper.BjtParkBuildHouseMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.j4sc.bjt.park.dao.entity.BjtParkBuildHouse">
+        <id column="house_id" property="houseId" />
+        <result column="floor" property="floor" />
+        <result column="house_number" property="houseNumber" />
+        <result column="area" property="area" />
+        <result column="build_id" property="buildId" />
+        <result column="build_name" property="buildName" />
+        <result column="attribution" property="attribution" />
+        <result column="company" property="company" />
+        <result column="company_id" property="companyId" />
+        <result column="lease_agreement_id" property="leaseAgreementId" />
+        <result column="lease_agreement_name" property="leaseAgreementName" />
+        <result column="ctime" property="ctime" />
+    </resultMap>
+
+</mapper>

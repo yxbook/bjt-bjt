@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.j4sc.bjt.park.dao.mapper.BjtParkBuildApprovalMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.j4sc.bjt.park.dao.entity.BjtParkBuildApproval">
+        <id column="b_approval_id" property="bApprovalId" />
+        <result column="application" property="application" />
+        <result column="content" property="content" />
+        <result column="ctime" property="ctime" />
+        <result column="utime" property="utime" />
+        <result column="build_id" property="buildId" />
+        <result column="company_id" property="companyId" />
+        <result column="user_id" property="userId" />
+        <result column="sources" property="sources" />
+        <result column="status" property="status" />
+        <result column="remark" property="remark" />
+        <result column="approval_user" property="approvalUser" />
+        <result column="company_name" property="companyName" />
+        <result column="username" property="username" />
+        <result column="user_realname" property="userRealname" />
+    </resultMap>
+
+</mapper>

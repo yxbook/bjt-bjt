@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.j4sc.bjt.park.dao.mapper.BjtParkBuildVisitorMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.j4sc.bjt.park.dao.entity.BjtParkBuildVisitor">
+        <id column="visitor_id" property="visitorId" />
+        <result column="visitor_phone" property="visitorPhone" />
+        <result column="visitor_name" property="visitorName" />
+        <result column="idcard_front" property="idcardFront" />
+        <result column="idcard_back" property="idcardBack" />
+        <result column="visitor_front" property="visitorFront" />
+        <result column="visit_matter" property="visitMatter" />
+        <result column="interview_phone" property="interviewPhone" />
+        <result column="visit_time" property="visitTime" />
+        <result column="status" property="status" />
+        <result column="ctime" property="ctime" />
+        <result column="interview_name" property="interviewName" />
+        <result column="remark" property="remark" />
+        <result column="interview_user_id" property="interviewUserId" />
+        <result column="build_id" property="buildId" />
+        <result column="use_count" property="useCount" />
+        <result column="type" property="type" />
+        <result column="interview_delete" property="interviewDelete" />
+        <result column="visitor_delete" property="visitorDelete" />
+    </resultMap>
+
+</mapper>

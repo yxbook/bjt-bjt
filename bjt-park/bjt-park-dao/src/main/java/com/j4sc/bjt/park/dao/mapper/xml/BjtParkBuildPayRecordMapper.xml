@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.j4sc.bjt.park.dao.mapper.BjtParkBuildPayRecordMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.j4sc.bjt.park.dao.entity.BjtParkBuildPayRecord">
+        <id column="p_record_id" property="pRecordId" />
+        <result column="company_id" property="companyId" />
+        <result column="company_name" property="companyName" />
+        <result column="pay_time" property="payTime" />
+        <result column="validity" property="validity" />
+        <result column="expire" property="expire" />
+        <result column="price" property="price" />
+        <result column="ctime" property="ctime" />
+        <result column="type" property="type" />
+        <result column="door_plate" property="doorPlate" />
+        <result column="attribution" property="attribution" />
+        <result column="contact" property="contact" />
+        <result column="contact_way" property="contactWay" />
+        <result column="build_name" property="buildName" />
+        <result column="build_id" property="buildId" />
+    </resultMap>
+
+</mapper>

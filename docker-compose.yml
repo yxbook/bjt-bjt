@@ -1,0 +1,76 @@
+version: '3'
+services:
+  bjt-system:
+    image: bjt/bjt-system-server
+    ports:
+      - "1003:1003"
+    environment:
+    - INSTANCE_HOST=172.18.147.199
+    - EUREKA_HOST=172.18.147.199
+    - EUREKA_PORT=8761
+    - REDIS_HOST=172.18.147.199
+    - REDIS_PORT=6379
+    - MYSQL_HOST=rm-wz92bf75fzu7z658q.mysql.rds.aliyuncs.com
+    - MYSQL_PORT=3306
+
+
+  j4sc-oss:
+    image: j4sc/j4sc-oss-server
+    ports:
+     - "8887:8887"
+    depends_on:
+    - j4sc-service
+    environment:
+    - INSTANCE_HOST=172.18.147.199
+    - EUREKA_HOST=172.18.147.199
+    - EUREKA_PORT=8761
+    - REDIS_HOST=172.18.147.199
+    - REDIS_PORT=6379
+    - MYSQL_HOST=rm-wz92bf75fzu7z658q.mysql.rds.aliyuncs.com
+    - MYSQL_PORT=3306
+  j4sc-auth:
+    image: j4sc/j4sc-auth-server
+    ports:
+     - "1001:1001"
+    depends_on:
+    - j4sc-oss
+    - j4sc-service
+    environment:
+    - INSTANCE_HOST=172.18.147.199
+    - EUREKA_HOST=172.18.147.199
+    - EUREKA_PORT=8761
+    - REDIS_HOST=172.18.147.199
+    - REDIS_PORT=6379
+    - ZIPKIN_HOST=172.18.147.199
+    - MYSQL_HOST=rm-wz92bf75fzu7z658q.mysql.rds.aliyuncs.com
+    - MYSQL_PORT=3306
+  j4sc-gateway:
+    image: j4sc/j4sc-gateway-server
+    ports:
+     - "80:80"
+    depends_on:
+    - j4sc-oss
+    - j4sc-auth
+    - j4sc-service
+    environment:
+    - INSTANCE_HOST=172.18.147.199
+    - EUREKA_HOST=172.18.147.199
+    - EUREKA_PORT=8761
+    - REDIS_HOST=172.18.147.199
+    - REDIS_PORT=6379
+    - ZIPKIN_HOST=172.18.147.199
+    - MYSQL_HOST=rm-wz92bf75fzu7z658q.mysql.rds.aliyuncs.com
+    - MYSQL_PORT=3306
+  j4sc-turbine:
+    image: j4sc/j4sc-turbine-server
+    ports:
+     - "8763:8763"
+    depends_on:
+    - j4sc-oss
+    - j4sc-auth
+    - j4sc-service
+    - j4sc-gateway
+    environment:
+    - INSTANCE_HOST=172.18.147.199
+    - EUREKA_HOST=172.18.147.199
+    - EUREKA_PORT=8761

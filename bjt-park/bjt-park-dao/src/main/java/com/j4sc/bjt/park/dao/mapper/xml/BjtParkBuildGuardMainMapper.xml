@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.j4sc.bjt.park.dao.mapper.BjtParkBuildGuardMainMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.j4sc.bjt.park.dao.entity.BjtParkBuildGuardMain">
+        <id column="guard_main_id" property="guardMainId" />
+        <result column="company_name" property="companyName" />
+        <result column="company_id" property="companyId" />
+        <result column="apply_user_id" property="applyUserId" />
+        <result column="apply_user_realname" property="applyUserRealname" />
+        <result column="apply_time" property="applyTime" />
+        <result column="approval_user_id" property="approvalUserId" />
+        <result column="approval_user_realname" property="approvalUserRealname" />
+        <result column="approval_time" property="approvalTime" />
+        <result column="detail" property="detail" />
+        <result column="ctime" property="ctime" />
+        <result column="build_id" property="buildId" />
+        <result column="remark" property="remark" />
+        <result column="apply_username" property="applyUsername" />
+        <result column="approval_username" property="approvalUsername" />
+        <result column="type" property="type" />
+        <result column="opinion" property="opinion" />
+        <result column="end_time" property="endTime" />
+    </resultMap>
+
+</mapper>

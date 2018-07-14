@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.j4sc.bjt.park.dao.mapper.BjtParkBuildMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.j4sc.bjt.park.dao.entity.BjtParkBuild">
+        <id column="build_id" property="buildId" />
+        <result column="name" property="name" />
+        <result column="address" property="address" />
+        <result column="ctime" property="ctime" />
+        <result column="utime" property="utime" />
+        <result column="latitude" property="latitude" />
+        <result column="longitude" property="longitude" />
+        <result column="property" property="property" />
+        <result column="attribution" property="attribution" />
+        <result column="floor" property="floor" />
+        <result column="park" property="park" />
+        <result column="remake" property="remake" />
+        <result column="code" property="code" />
+        <result column="contact" property="contact" />
+        <result column="contact_way" property="contactWay" />
+        <result column="area" property="area" />
+        <result column="space_id" property="spaceId" />
+        <result column="space_name" property="spaceName" />
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.j4sc.bjt.park.dao.mapper.BjtParkBuildGateRecordMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.j4sc.bjt.park.dao.entity.BjtParkBuildGateRecord">
+        <id column="g_record_id" property="gRecordId" />
+        <result column="realname" property="realname" />
+        <result column="username" property="username" />
+        <result column="device_identifier" property="deviceIdentifier" />
+        <result column="company_name" property="companyName" />
+        <result column="company_id" property="companyId" />
+        <result column="ctime" property="ctime" />
+        <result column="remark" property="remark" />
+        <result column="time" property="time" />
+        <result column="type" property="type" />
+        <result column="build_id" property="buildId" />
+    </resultMap>
+
+</mapper>

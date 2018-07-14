@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.j4sc.bjt.system.dao.mapper.BjtSystemAppCarouselMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.j4sc.bjt.system.dao.entity.BjtSystemAppCarousel">
+        <id column="carousel_id" property="carouselId" />
+        <result column="type" property="type" />
+        <result column="image_path" property="imagePath" />
+        <result column="orderValue" property="order_value" />
+        <result column="status" property="status" />
+        <result column="link" property="link" />
+        <result column="remark" property="remark" />
+        <result column="ctime" property="ctime" />
+        <result column="name" property="name" />
+        <result column="show_start_time" property="showStartTime" />
+        <result column="show_end_time" property="showEndTime" />
+        <result column="belong" property="belong" />
+    </resultMap>
+
+</mapper>

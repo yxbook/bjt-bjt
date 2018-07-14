@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.j4sc.bjt.park.dao.mapper.BjtParkBuildAgreementRecordMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.j4sc.bjt.park.dao.entity.BjtParkBuildAgreementRecord">
+        <id column="agreement_id" property="agreementId" />
+        <result column="name" property="name" />
+        <result column="first_party" property="firstParty" />
+        <result column="door_plate" property="doorPlate" />
+        <result column="secend_party" property="secendParty" />
+        <result column="number" property="number" />
+        <result column="begin_time" property="beginTime" />
+        <result column="end_time" property="endTime" />
+        <result column="payment" property="payment" />
+        <result column="pay_fee" property="payFee" />
+        <result column="next_time" property="nextTime" />
+        <result column="resource" property="resource" />
+        <result column="type" property="type" />
+        <result column="company_id" property="companyId" />
+        <result column="area" property="area" />
+        <result column="unit_price" property="unitPrice" />
+        <result column="total_price" property="totalPrice" />
+        <result column="deposit" property="deposit" />
+        <result column="contract" property="contract" />
+        <result column="ctime" property="ctime" />
+        <result column="open" property="open" />
+        <result column="operate" property="operate" />
+        <result column="build_id" property="buildId" />
+        <result column="build_name" property="buildName" />
+    </resultMap>
+
+</mapper>

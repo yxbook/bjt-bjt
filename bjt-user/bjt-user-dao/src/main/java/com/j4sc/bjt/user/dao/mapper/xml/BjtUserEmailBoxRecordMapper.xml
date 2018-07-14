@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.j4sc.bjt.user.dao.mapper.BjtUserEmailBoxRecordMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.j4sc.bjt.user.dao.entity.BjtUserEmailBoxRecord">
+        <id column="record_id" property="recordId" />
+        <result column="sender" property="sender" />
+        <result column="sender_id" property="senderId" />
+        <result column="receiver_id" property="receiverId" />
+        <result column="copyer" property="copyer" />
+        <result column="copyer_id" property="copyerId" />
+        <result column="title" property="title" />
+        <result column="content" property="content" />
+        <result column="send_type" property="sendType" />
+        <result column="send_date" property="sendDate" />
+        <result column="read_date" property="readDate" />
+        <result column="box_type" property="boxType" />
+        <result column="email_status" property="emailStatus" />
+        <result column="ctime" property="ctime" />
+        <result column="resource" property="resource" />
+        <result column="remark" property="remark" />
+        <result column="email_id" property="emailId" />
+        <result column="receiver_username" property="receiverUsername" />
+        <result column="sender_avatar" property="senderAvatar" />
+        <result column="sender_username" property="senderUsername" />
+    </resultMap>
+
+</mapper>

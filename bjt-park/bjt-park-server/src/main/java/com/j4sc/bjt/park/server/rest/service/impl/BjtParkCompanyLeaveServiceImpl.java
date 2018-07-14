@@ -1,0 +1,27 @@
+package com.j4sc.bjt.park.server.rest.service.impl;
+
+import com.j4sc.common.annotation.BaseService;
+import com.j4sc.common.base.BaseServiceImpl;
+import com.j4sc.bjt.park.dao.mapper.BjtParkCompanyLeaveMapper;
+import com.j4sc.bjt.park.dao.entity.BjtParkCompanyLeave;
+import com.j4sc.bjt.park.rest.api.BjtParkCompanyLeaveService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+/**
+* @Description: BjtParkCompanyLeave Service实现
+* @Author: LongRou
+* @CreateDate: 2018/4/14.
+* @Version: 1.0
+**/
+@Service
+@Transactional
+@BaseService
+public class BjtParkCompanyLeaveServiceImpl extends BaseServiceImpl<BjtParkCompanyLeaveMapper, BjtParkCompanyLeave> implements BjtParkCompanyLeaveService {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(BjtParkCompanyLeaveServiceImpl.class);
+
+}

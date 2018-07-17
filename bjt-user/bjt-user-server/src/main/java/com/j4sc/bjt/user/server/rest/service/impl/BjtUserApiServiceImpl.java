@@ -1,6 +1,7 @@
 package com.j4sc.bjt.user.server.rest.service.impl;
 
 import com.alibaba.druid.support.json.JSONUtils;
+import com.alibaba.fastjson.JSON;
 import com.baidu.unbiz.fluentvalidator.ComplexResult;
 import com.baidu.unbiz.fluentvalidator.FluentValidator;
 import com.baidu.unbiz.fluentvalidator.ResultCollectors;
@@ -83,7 +84,7 @@ public class BjtUserApiServiceImpl implements BjtUserApiService {
     })
     @Override
     public BaseResult<BjtUserUser> login(@RequestBody BjtUserUser bjtUserUser) {
-        LOGGER.error(bjtUserUser.toString());
+        LOGGER.info("登录输入参数-BjtUserUser={}", JSON.toJSONString(bjtUserUser));
         //信息校验
         ComplexResult complexResult = FluentValidator.checkAll()
                 .on(bjtUserUser.getUsername(), new LengthValidator(1, 20, "用户名"))

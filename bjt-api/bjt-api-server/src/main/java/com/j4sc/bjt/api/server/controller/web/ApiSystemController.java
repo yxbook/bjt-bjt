@@ -1,5 +1,6 @@
 package com.j4sc.bjt.api.server.controller.web;
 
+import com.alibaba.fastjson.JSON;
 import com.baidu.unbiz.fluentvalidator.ComplexResult;
 import com.baidu.unbiz.fluentvalidator.FluentValidator;
 import com.baidu.unbiz.fluentvalidator.ResultCollectors;
@@ -121,7 +122,7 @@ public class ApiSystemController extends BaseJwtController {
     })
     @RequestMapping(value = "build/select/Build", method = RequestMethod.GET)
     public BaseResult<BjtParkBuild> selectBuild(String id){
-        LOGGER.info(" Chaxun 楼宇...");
+        LOGGER.info("ApiSystemController.selectBuild根据ID查询楼宇输入参数id={}", id);
         BaseResult<BjtParkBuild> baseResult = parkBuildClient.selectById(id);
         return baseResult;
     }
@@ -131,7 +132,7 @@ public class ApiSystemController extends BaseJwtController {
     })
     @RequestMapping(value = "build/select/BuildUser", method = RequestMethod.GET)
     public BaseResult<List<Map<String, Object>>> selectBuildUser(@RequestParam("buildId") String buildId){
-        LOGGER.info(" 查询楼宇管理者...");
+        LOGGER.info("ApiSystemController.selectBuildUser分页查询查询楼宇管理者输入参数buildId={}", buildId);
         BaseResult buildResult = parkBuildClient.selectBuildUserList(Integer.parseInt(buildId));
         if (buildResult.getStatus() != BaseResultEnum.SUCCESS.getStatus())return buildResult;
         List<BjtParkBuildUser> buildUserList = (List<BjtParkBuildUser>)buildResult.getData();
@@ -155,7 +156,7 @@ public class ApiSystemController extends BaseJwtController {
     })
     @RequestMapping(value = "build/select/PageBuild", method = RequestMethod.GET)
     public BaseResult<com.baomidou.mybatisplus.plugins.Page<BjtParkBuild>> selectPageBuild(@RequestParam Map<String, Object> params){
-        LOGGER.info(" PAGE查询楼宇...");
+        LOGGER.info("ApiSystemController.selectPageBuild分页查询楼宇输入参数params={}", JSON.toJSONString(params));
         BaseResult<com.baomidou.mybatisplus.plugins.Page<BjtParkBuild>> baseResult = parkBuildClient.selectPage(params);
         return baseResult;
     }
